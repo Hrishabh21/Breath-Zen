@@ -1,4 +1,5 @@
 let isBreathing = false;
+let motivationEnabled = true;
 let currentPhase = 'ready';
 let cycleCount = 0;
 let startTime = 0;
@@ -86,6 +87,7 @@ function getBreathingTimes() {
 }
 
 function getRandomMotivationText(phase) {
+    if (!motivationEnabled) return '';
     const texts = motivationTexts[phase] || motivationTexts.ready;
     return texts[Math.floor(Math.random() * texts.length)];
 }
@@ -134,7 +136,12 @@ function updatePhaseDisplay(phase, timeRemaining = null) {
     }
     
     phaseDisplay.textContent = displayText;
-    motivationText.textContent = getRandomMotivationText(motivationPhase);
+    if (motivationEnabled) {
+        motivationText.style.display = '';
+        motivationText.textContent = getRandomMotivationText(motivationPhase);
+    } else {
+        motivationText.style.display = 'none';
+    }
 }
 
 function setPhaseAnimation(duration) {
@@ -284,4 +291,16 @@ document.querySelectorAll('input[type="number"]').forEach(input => {
 });
 
 // Initialize display
+
+function toggleMotivationText() {
+    motivationEnabled = !motivationEnabled;
+    const btn = document.getElementById('toggleMotivationBtn');
+    if (motivationEnabled) {
+        btn.textContent = 'Disable Text';
+    } else {
+        btn.textContent = 'Enable Text';
+    }
+    updatePhaseDisplay(currentPhase);
+}
+
 updatePhaseDisplay('ready');

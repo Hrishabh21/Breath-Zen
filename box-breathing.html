@@ -37,12 +37,15 @@
                 <label for="exhaleHoldTime">Exhale hold time (seconds):</label>
                 <input type="number" id="exhaleHoldTime" value="4" step="0.5" min="0">
             </div>
+              
         </div>
+         <button id="toggleMotivationBtn" class="toggle-motivation-btn" onclick="toggleMotivationText()">Disable Text</button>
         
         <div class="breathing-container">
             <div class="breathing-box" id="breathingBox">
                 <div class="breathing-indicator" id="breathingIndicator"></div>
                 <div class="motivation-text" id="motivationText">Ready to breathe</div>
+             
             </div>
             <div class="phase-display" id="phaseDisplay">Ready to breathe</div>
         </div>
