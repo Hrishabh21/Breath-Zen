@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BreathZen - Mindful Breathing Exercises</title>
+    <link rel="stylesheet" href="homepage.css">
+</head>
+<body>
+    <div class="background-animation"></div>
+    
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <span class="logo-icon">🧘‍♀️</span>
+                <h1>BreathZen</h1>
+            </div>
+            <p class="tagline">Find your calm, one breath at a time</p>
+        </header>
+
+        <main class="main-content">
+            <div class="welcome-section">
+                <h2>Welcome to Your Breathing Journey</h2>
+                <p>Choose your mindful breathing exercise and discover the power of conscious breathing for stress relief, focus, and inner peace.</p>
+            </div>
+
+            <div class="exercises-grid">
+                <div class="exercise-card" data-exercise="counting">
+                    <div class="card-icon">
+                        <span>🎯</span>
+                    </div>
+                    <h3>Counting Breaths</h3>
+                    <p>Focus your mind by counting breaths in rhythm. Perfect for concentration and mindfulness practice.</p>
+                    <div class="card-features">
+                        <span class="feature">🕒 Customizable timing</span>
+                        <span class="feature">📊 Progress tracking</span>
+                        <span class="feature">⚡ Quick focus</span>
+                    </div>
+                    <button class="card-button" onclick="goToExercise('counting.html')">
+                        Start Counting
+                        <span class="button-arrow">→</span>
+                    </button>
+                </div>
+
+                <div class="exercise-card" data-exercise="box-breathing">
+                    <div class="card-icon">
+                        <span>📦</span>
+                    </div>
+                    <h3>Box Breathing</h3>
+                    <p>Follow the animated guide through the classic 4-4-4-4 breathing pattern used by navy seals and meditation masters.</p>
+                    <div class="card-features">
+                        <span class="feature">🎨 Visual guidance</span>
+                        <span class="feature">🎯 Structured rhythm</span>
+                        <span class="feature">💪 Stress relief</span>
+                    </div>
+                    <button class="card-button" onclick="goToExercise('box-breathing.html')">
+                        Start Box Breathing
+                        <span class="button-arrow">→</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="benefits-section">
+                <h3>Why Breathing Exercises?</h3>
+                <div class="benefits-grid">
+                    <div class="benefit-item">
+                        <span class="benefit-icon">🧠</span>
+                        <h4>Reduce Stress</h4>
+                        <p>Lower cortisol levels and activate your body's relaxation response</p>
+                    </div>
+                    <div class="benefit-item">
+                        <span class="benefit-icon">💡</span>
+                        <h4>Improve Focus</h4>
+                        <p>Enhance concentration and mental clarity through mindful breathing</p>
+                    </div>
+                    <div class="benefit-item">
+                        <span class="benefit-icon">❤️</span>
+                        <h4>Better Sleep</h4>
+                        <p>Calm your nervous system for deeper, more restful sleep</p>
+                    </div>
+                    <div class="benefit-item">
+                        <span class="benefit-icon">⚡</span>
+                        <h4>Boost Energy</h4>
+                        <p>Oxygenate your body and increase natural energy levels</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>✨ Take a deep breath and begin your journey to inner peace ✨</p>
+        </footer>
+    </div>
+
+    <script src="homepage.js"></script>
+</body>
+</html>

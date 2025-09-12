@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counting in a Single Breath</title>
+    <link rel="stylesheet" href="counting.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header-nav">
+            <button class="home-button" onclick="goToHomepage()">
+                <span class="home-icon">🏠</span>
+                <span class="home-text">Home</span>
+            </button>
+        </div>
+        
+        <h1>Counting in a Single Breath</h1>
+        
+        <div class="input-group">
+            <label for="interval">Time interval (seconds):</label>
+            <input type="number" id="interval" value="0.5" step="0.1" min="0.1">
+        </div>
+        
+        <div class="count-display" id="countDisplay">Ready to count</div>
+        
+        <button class="control-button" id="controlButton" onclick="toggleCounting()">START</button>
+        
+        <div class="result" id="result">
+            <h3>Results</h3>
+            <div class="result-item">Total time: <span class="result-number" id="totalTime">0</span> seconds</div>
+            <div class="result-item">Last number: <span class="result-number" id="lastNumber">0</span></div>
+        </div>
+    </div>
+
+    <script src="counting.js"></script>
+</body>
+</html>

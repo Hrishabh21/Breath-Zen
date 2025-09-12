@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Breathing Exercise</title>
+    <link rel="stylesheet" href="box-breathing.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header-nav">
+            <button class="home-button" onclick="goToHomepage()">
+                <span class="home-icon">🏠</span>
+                <span class="home-text">Home</span>
+            </button>
+        </div>
+        
+        <h1>Box Breathing Exercise</h1>
+        
+        <div class="inputs-grid">
+            <div class="input-group">
+                <label for="inhaleTime">Inhale time (seconds):</label>
+                <input type="number" id="inhaleTime" value="4" step="0.5" min="0.5">
+            </div>
+            
+            <div class="input-group">
+                <label for="inhaleHoldTime">Inhale hold time (seconds):</label>
+                <input type="number" id="inhaleHoldTime" value="4" step="0.5" min="0">
+            </div>
+            
+            <div class="input-group">
+                <label for="exhaleTime">Exhale time (seconds):</label>
+                <input type="number" id="exhaleTime" value="4" step="0.5" min="0.5">
+            </div>
+            
+            <div class="input-group">
+                <label for="exhaleHoldTime">Exhale hold time (seconds):</label>
+                <input type="number" id="exhaleHoldTime" value="4" step="0.5" min="0">
+            </div>
+        </div>
+        
+        <div class="breathing-container">
+            <div class="breathing-box" id="breathingBox">
+                <div class="breathing-indicator" id="breathingIndicator"></div>
+                <div class="motivation-text" id="motivationText">Ready to breathe</div>
+            </div>
+            <div class="phase-display" id="phaseDisplay">Ready to breathe</div>
+        </div>
+        
+        <button class="control-button" id="controlButton" onclick="toggleBreathing()">START</button>
+        
+        <div class="result" id="result">
+            <h3>Session Results</h3>
+            <div class="result-item">Cycles completed: <span class="result-number" id="cyclesCompleted">0</span></div>
+            <div class="result-item">Total time: <span class="result-number" id="totalTime">0</span> seconds</div>
+        </div>
+    </div>
+
+    <script src="box-breathing.js"></script>
+</body>
+</html>
