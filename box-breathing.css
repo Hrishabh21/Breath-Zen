@@ -126,6 +126,22 @@ h1 {
 .input-group {
     text-align: center;
 }
+.op{
+    display: none;
+    /* visibility: hidden; */
+}
+.cb{
+    display:inline-flex;
+}
+.cb label{
+    font-size: 18px;
+}
+.cb input{
+    margin-right: 0px;
+    height: 24px;
+    width: 24px;
+    margin-right: 8px;
+}
 
 label {
     display: block;

@@ -16,6 +16,11 @@
         </div>
         
         <h1>Box Breathing Exercise</h1>
+        <div class="cb">
+        <input type="checkbox" id="hold" onclick="toggleCB()">
+        <label for="hold">Want Inhale/Exhale Hold</label>
+        </div>
+        
         
         <div class="inputs-grid">
             <div class="input-group">
@@ -23,9 +28,9 @@
                 <input type="number" id="inhaleTime" value="4" step="0.5" min="0.5">
             </div>
             
-            <div class="input-group">
+            <div class="input-group op">
                 <label for="inhaleHoldTime">Inhale hold time (seconds):</label>
-                <input type="number" id="inhaleHoldTime" value="4" step="0.5" min="0">
+                <input type="number" id="inhaleHoldTime" value="0" step="0.5" min="0">
             </div>
             
             <div class="input-group">
@@ -33,9 +38,13 @@
                 <input type="number" id="exhaleTime" value="4" step="0.5" min="0.5">
             </div>
             
-            <div class="input-group">
+            <div class="input-group op">
                 <label for="exhaleHoldTime">Exhale hold time (seconds):</label>
-                <input type="number" id="exhaleHoldTime" value="4" step="0.5" min="0">
+                <input type="number" id="exhaleHoldTime" value="0" step="0.5" min="0">
+            </div>
+             <div class="input-group">
+                <label for="targetCycles">Target Cycles:</label>
+                <input type="number" id="targetCycles" value="1" step="1" min="1">
             </div>
               
         </div>

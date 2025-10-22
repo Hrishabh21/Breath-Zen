@@ -10,6 +10,18 @@ function goToHomepage() {
     window.location.href = 'index.html';
 }
 
+function toggleCB(){
+    const cb = document.getElementById('hold').checked;
+    
+     const op =document.getElementsByClassName('op')
+    for (const el of op) {
+        el.style.display=cb?"block":"none";
+        
+    }
+
+       
+}
+
 // Breathing phases
 const phases = {
     INHALE: 'inhale',
@@ -17,6 +29,7 @@ const phases = {
     EXHALE: 'exhale',
     EXHALE_HOLD: 'exhale-hold'
 };
+
 
 // Motivational texts for each phase
 const motivationTexts = {
@@ -171,8 +184,9 @@ function runBreathingPhase(phase, duration, onComplete) {
 
 function startBreathingCycle() {
     if (!isBreathing) return;
-    
+   
     const times = getBreathingTimes();
+    const targetCycles = Math.max(0, parseInt(document.getElementById('targetCycles').value))
     
     // Inhale phase
     runBreathingPhase(phases.INHALE, times.inhale, () => {
@@ -204,6 +218,10 @@ function startBreathingCycle() {
                     });
                 } else {
                     cycleCount++;
+                    if(cycleCount==targetCycles){
+                        isBreathing=true;
+                        toggleBreathing();
+                    }
                     startBreathingCycle(); // Start next cycle
                 }
             });
