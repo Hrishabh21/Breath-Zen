@@ -287,8 +287,11 @@ document.addEventListener('keydown', function(event) {
 document.querySelectorAll('input[type="number"]').forEach(input => {
     input.addEventListener('keydown', function(event) {
         if (event.key === 'Enter') {
+            
             event.preventDefault();
-            toggleBreathing();
+            
+             toggleBreathing();
+           
         }
     });
     
